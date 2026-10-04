@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Padaria do Povo — Sabor e tradição | Belém - PA</title>
+  <meta name="description" content="Padaria do Povo: pães, bolos, doces, salgados e café da manhã desde 1985, em Belém - PA. (Projeto fictício de portfólio.)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!--
+  PROJETO FICTÍCIO DE PORTFÓLIO (HC Web).
+  O número de WhatsApp usado nos botões (55 91 99999-9999) é apenas DEMONSTRATIVO.
+  Troque o link wa.me abaixo por um número real apenas se for usar o site de verdade.
+-->
+
+<header class="header">
+  <div class="container">
+    <a href="#inicio" class="logo">
+      <strong>🥖 Padaria do Povo</strong>
+      <small>Sabor e tradição</small>
+    </a>
+    <nav class="menu" id="menu" aria-label="Menu principal">
+      <a href="#inicio">Início</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="btn btn-ouro" href="https://wa.me/5591999999999" target="_blank" rel="noopener noreferrer">Pedir pelo WhatsApp</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <!-- HERO: a foto é aplicada via CSS (imagens/hero-padaria.jpg) -->
+  <section class="hero" id="inicio" aria-label="Apresentação">
+    <div class="container">
+      <div class="hero-texto">
+        <span class="selo">DESDE 1985</span>
+        <h1>Pães fresquinhos<br>todos os dias.</h1>
+        <p>Pães, bolos, salgados e aquele café especial para começar o dia do jeito certo.</p>
+        <a class="btn btn-ouro" href="#produtos">Conheça nossos produtos →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="produtos" id="produtos">
+    <div class="container">
+      <div class="titulo-secao">
+        <span>NOSSOS PRODUTOS</span>
+        <h2>Qualidade, sabor e variedade todos os dias.</h2>
+      </div>
+      <div class="grade-produtos">
+        <article class="card">
+          <div class="foto"><img src="imagens/paes.jpg" alt="Pães fresquinhos da Padaria do Povo" loading="lazy"></div>
+          <div class="card-corpo">
+            <h3>Pães</h3>
+            <p>Pão francês, pão de queijo, pão de milho, croissant e muito mais.</p>
+            <p class="preco">A partir de R$ 0,80</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="foto"><img src="imagens/bolos.jpg" alt="Bolos caseiros da Padaria do Povo" loading="lazy"></div>
+          <div class="card-corpo">
+            <h3>Bolos</h3>
+            <p>Chocolate, cenoura, fubá, formigueiro e bolos de aniversário.</p>
+            <p class="preco">A partir de R$ 12,90</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="foto"><img src="imagens/doces.jpg" alt="Doces e sobremesas da Padaria do Povo" loading="lazy"></div>
+          <div class="card-corpo">
+            <h3>Doces</h3>
+            <p>Brigadeiro, sonho, pudim, tortas e sobremesas especiais.</p>
+            <p class="preco">A partir de R$ 2,50</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="foto"><img src="imagens/salgados.jpg" alt="Salgados assados e fritos da Padaria do Povo" loading="lazy"></div>
+          <div class="card-corpo">
+            <h3>Salgados</h3>
+            <p>Coxinha, empada, esfiha, enroladinho e muito mais.</p>
+            <p class="preco">A partir de R$ 2,90</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="foto"><img src="imagens/cafe.jpg" alt="Café da manhã completo da Padaria do Povo" loading="lazy"></div>
+          <div class="card-corpo">
+            <h3>Café da manhã</h3>
+            <p>Café, cappuccino, sucos, combos e opções especiais.</p>
+            <p class="preco">A partir de R$ 6,90</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sobre" id="sobre">
+    <div class="container sobre-grade">
+      <div class="foto"><img src="imagens/vitrine.jpg" alt="Vitrine da Padaria do Povo com pães e doces" loading="lazy"></div>
+      <div>
+        <span class="rotulo">SOBRE NÓS</span>
+        <h2>Feito para a sua família</h2>
+        <p>Na Padaria do Povo, acreditamos que pequenos momentos podem ficar ainda melhores com um pão quentinho e um café passado na hora.</p>
+        <p class="destaque">Mais que uma padaria, somos parte da sua rotina.</p>
+        <div class="infos" id="contato">
+          <div class="info"><strong>📍 Nosso endereço</strong>Av. Pedro Álvares Cabral, 1234<br>Belém - PA</div>
+          <div class="info"><strong>🕐 Horário de funcionamento</strong>Segunda a Sábado: 6h às 21h<br>Domingos: 6h às 14h</div>
+          <div class="info">
+            <strong>📱 Peça pelo WhatsApp</strong>
+            <!-- Número fictício, apenas demonstrativo -->
+            <a href="https://wa.me/5591999999999" target="_blank" rel="noopener noreferrer">(91) 99999-9999</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="galeria" id="galeria">
+    <div class="container">
+      <div class="titulo-secao">
+        <span>GALERIA</span>
+        <h2>Nossos produtos em cada detalhe</h2>
+      </div>
+      <div class="grade-galeria">
+        <div class="foto g-grande"><img src="imagens/paes.jpg" alt="Pães recém-saídos do forno" loading="lazy"></div>
+        <div class="foto"><img src="imagens/bolos.jpg" alt="Bolo de chocolate fatiado" loading="lazy"></div>
+        <div class="foto"><img src="imagens/doces.jpg" alt="Brigadeiros e doces variados" loading="lazy"></div>
+        <div class="foto g-largo"><img src="imagens/vitrine.jpg" alt="Vitrine cheia de delícias" loading="lazy"></div>
+        <div class="foto"><img src="imagens/salgados.jpg" alt="Coxinhas e salgados dourados" loading="lazy"></div>
+        <div class="foto"><img src="imagens/cafe.jpg" alt="Café com leite e pão na chapa" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="container">
+    <div class="rodape-topo">
+      <div><strong>🥖 Padaria do Povo</strong>Sabor e tradição</div>
+      <!-- Links fictícios: substitua pelos perfis reais se o projeto for usado de verdade -->
+      <div class="redes">
+        <a href="#" aria-label="Instagram da Padaria do Povo (link fictício)">Instagram</a>
+        <a href="#" aria-label="Facebook da Padaria do Povo (link fictício)">Facebook</a>
+      </div>
+    </div>
+    <p class="copy">© 2026 Padaria do Povo · Todos os direitos reservados</p>
+  </div>
+</footer>
+
+<script>
+  // Menu mobile
+  const toggle = document.getElementById('menuToggle');
+  const menu = document.getElementById('menu');
+  toggle.addEventListener('click', () => {
+    const aberto = menu.classList.toggle('aberto');
+    toggle.setAttribute('aria-expanded', aberto);
+  });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    menu.classList.remove('aberto');
+    toggle.setAttribute('aria-expanded', false);
+  }));
+
+  // Enquanto a foto não existir na pasta, o espaço dela fica reservado (fundo dourado)
+  // com o nome do arquivo esperado. Ao colocar a foto com o mesmo nome, ela aparece sozinha.
+  document.querySelectorAll('.foto img').forEach(img => {
+    const falhou = () => { const f = img.parentElement; f.classList.add('sem-foto'); f.dataset.foto = img.getAttribute('src'); };
+    img.addEventListener('error', falhou);
+    if (img.complete && img.naturalWidth === 0) falhou();
+  });
+</script>
+</body>
+</html>

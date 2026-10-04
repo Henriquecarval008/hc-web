@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Estilo Moda — Elegância em cada detalhe</title>
+  <meta name="description" content="Estilo Moda: moda feminina com elegância e sofisticação. (Projeto fictício de portfólio.)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- PROJETO FICTÍCIO DE PORTFÓLIO (HC Web). Nenhum dado de contato é real. -->
+
+<header class="header">
+  <div class="container">
+    <a href="#inicio" class="logo">Estilo <em>Moda</em></a>
+    <nav class="menu" id="menu" aria-label="Menu principal">
+      <a href="#inicio">Início</a>
+      <a href="#colecao">Coleção</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#destaques">Destaques</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="container hero-grade">
+      <div class="hero-texto">
+        <span class="rotulo">NOVA COLEÇÃO 2026</span>
+        <h1>Seu estilo,<br><em>sua assinatura.</em></h1>
+        <p>Peças atemporais e modernas, pensadas para mulheres que gostam de se vestir com elegância e personalidade.</p>
+        <a class="btn" href="#colecao">Conhecer a coleção</a>
+      </div>
+      <div class="hero-visual">
+        <div class="foto alta" data-foto="imagens/hero-moda.jpg">
+          <img src="imagens/hero-moda.jpg" alt="Modelo vestindo peça da nova coleção Estilo Moda">
+        </div>
+        <span class="selo-flutuante">Novidades<br>toda semana</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="apresentacao" id="apresentacao">
+    <div class="container">
+      <span class="rotulo">APRESENTAÇÃO</span>
+      <p class="frase">Moda não é sobre seguir tendências. É sobre encontrar peças que contam a sua história.</p>
+    </div>
+  </section>
+
+  <section class="colecao" id="colecao">
+    <div class="container">
+      <div class="titulo-secao">
+        <span class="rotulo">COLEÇÃO EM DESTAQUE</span>
+        <h2>Escolhidas com carinho para você</h2>
+      </div>
+      <div class="grade-produtos">
+        <article class="produto">
+          <div class="foto" data-foto="imagens/vestido.jpg"><img src="imagens/vestido.jpg" alt="Vestido midi elegante" loading="lazy"></div>
+          <h3>Vestido Midi</h3>
+          <p>Corte fluido e tecido leve para qualquer ocasião.</p>
+          <span class="preco">R$ 289,90</span>
+        </article>
+        <article class="produto">
+          <div class="foto" data-foto="imagens/blazer.jpg"><img src="imagens/blazer.jpg" alt="Blazer de alfaiataria" loading="lazy"></div>
+          <h3>Blazer Alfaiataria</h3>
+          <p>Estrutura impecável para um visual sofisticado.</p>
+          <span class="preco">R$ 349,90</span>
+        </article>
+        <article class="produto">
+          <div class="foto" data-foto="imagens/blusa.jpg"><img src="imagens/blusa.jpg" alt="Blusa de seda em tom neutro" loading="lazy"></div>
+          <h3>Blusa Seda</h3>
+          <p>Toque macio e caimento perfeito em tons neutros.</p>
+          <span class="preco">R$ 179,90</span>
+        </article>
+        <article class="produto">
+          <div class="foto" data-foto="imagens/calca.jpg"><img src="imagens/calca.jpg" alt="Calça pantalona" loading="lazy"></div>
+          <h3>Calça Pantalona</h3>
+          <p>Conforto e elegância do trabalho ao jantar.</p>
+          <span class="preco">R$ 239,90</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sobre" id="sobre">
+    <div class="container sobre-grade">
+      <div class="foto" data-foto="imagens/sobre-loja.jpg"><img src="imagens/sobre-loja.jpg" alt="Interior da loja Estilo Moda" loading="lazy"></div>
+      <div>
+        <span class="rotulo">SOBRE A ESTILO MODA</span>
+        <h2>Vestir bem é um ato de confiança</h2>
+        <p>A Estilo Moda nasceu para oferecer peças com qualidade, bom gosto e atendimento próximo. Cada coleção é pensada para valorizar quem você é, sem excessos.</p>
+        <p>Aqui você encontra curadoria cuidadosa, tecidos agradáveis e modelagens que combinam com o seu dia a dia.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="diferenciais" id="destaques">
+    <div class="container">
+      <div class="titulo-secao">
+        <span class="rotulo">DESTAQUES</span>
+        <h2>O que torna a loja especial</h2>
+      </div>
+      <div class="grade-dif">
+        <div class="dif"><b>01</b><h3>Curadoria exclusiva</h3><p>Peças selecionadas para um guarda-roupa atemporal.</p></div>
+        <div class="dif"><b>02</b><h3>Qualidade nos detalhes</h3><p>Tecidos e acabamentos pensados para durar.</p></div>
+        <div class="dif"><b>03</b><h3>Atendimento próximo</h3><p>Ajuda para montar looks que combinam com você.</p></div>
+        <div class="dif"><b>04</b><h3>Novidades semanais</h3><p>Sempre algo novo chegando na vitrine.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="contato">
+    <div class="container cta-interno">
+      <div>
+        <span class="rotulo claro">CONTATO</span>
+        <h2>Venha conhecer a coleção</h2>
+        <p>Adicione aqui o WhatsApp e endereço da loja.</p>
+      </div>
+      <a class="btn btn-claro" href="#contato">Falar com a loja</a>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="container">
+    <strong>Estilo <em>Moda</em></strong>
+    <p>Adicione aqui o endereço, o Instagram e o horário de funcionamento.</p>
+    <p class="copy">© 2026 Estilo Moda · Projeto demonstrativo HC Web</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,633 @@
+/* Padaria do Povo — projeto fictício (portfólio HC Web) */
+
+:root {
+--marrom: #3b2418;
+--marrom-2: #5a3a28;
+--creme: #fbf4e8;
+--bege: #f1e3cc;
+--dourado: #d9902f;
+--laranja: #c9731f;
+--texto: #4a3426;
+--sombra: 0 10px 30px rgba(59, 36, 24, .12);
+--raio: 22px;
+--serif: "Fraunces", Georgia, "Times New Roman", serif;
+--sans: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  }
+
+html {
+scroll-behavior: smooth;
+scroll-padding-top: 90px;
+}
+
+body {
+font-family: var(--sans);
+color: var(--texto);
+background: var(--creme);
+line-height: 1.65;
+font-size: 17px;
+}
+
+img {
+display: block;
+max-width: 100%;
+height: 100%;
+width: 100%;
+object-fit: cover;
+}
+
+a {
+color: inherit;
+text-decoration: none;
+}
+
+:focus-visible {
+outline: 3px solid var(--dourado);
+outline-offset: 3px;
+}
+
+.container {
+width: min(1160px, 100% - 40px);
+margin-inline: auto;
+}
+
+h1,
+h2,
+h3 {
+font-family: var(--serif);
+color: var(--marrom);
+line-height: 1.15;
+}
+
+/* =========================
+BOTÃO VOLTAR PARA HC WEB
+========================= */
+
+.voltar-area {
+position: fixed;
+top: 88px;
+left: 20px;
+z-index: 100;
+}
+
+.voltar-hc {
+display: inline-flex;
+align-items: center;
+gap: 6px;
+padding: 9px 16px;
+border-radius: 999px;
+background: rgba(59, 36, 24, .94);
+color: #fff;
+font-size: .88rem;
+font-weight: 700;
+box-shadow: 0 8px 20px rgba(59, 36, 24, .22);
+transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+}
+
+.voltar-hc:hover {
+transform: translateY(-2px);
+background: var(--laranja);
+box-shadow: 0 10px 24px rgba(201, 115, 31, .35);
+}
+
+/* =========================
+BOTÕES
+========================= */
+
+.btn {
+display: inline-block;
+padding: 14px 28px;
+border-radius: 999px;
+font-weight: 700;
+transition: transform .2s, box-shadow .2s, background .2s;
+text-align: center;
+}
+
+.btn-ouro {
+background: linear-gradient(135deg, var(--dourado), var(--laranja));
+color: #fff;
+box-shadow: 0 8px 20px rgba(201, 115, 31, .35);
+}
+
+.btn-ouro:hover {
+transform: translateY(-2px);
+box-shadow: 0 12px 26px rgba(201, 115, 31, .45);
+}
+
+/* =========================
+CABEÇALHO
+========================= */
+
+.header {
+position: fixed;
+inset: 0 0 auto 0;
+z-index: 50;
+background: rgba(251, 244, 232, .94);
+backdrop-filter: blur(8px);
+box-shadow: 0 2px 18px rgba(59, 36, 24, .08);
+}
+
+.header .container {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 20px;
+min-height: 74px;
+}
+
+.logo strong {
+display: block;
+font-family: var(--serif);
+font-size: 1.35rem;
+color: var(--marrom);
+line-height: 1.1;
+}
+
+.logo small {
+font-size: .78rem;
+color: var(--laranja);
+letter-spacing: .04em;
+}
+
+.menu {
+display: flex;
+gap: 30px;
+font-weight: 500;
+}
+
+.menu a:hover {
+color: var(--laranja);
+}
+
+.header .btn {
+padding: 11px 22px;
+font-size: .95rem;
+}
+
+.menu-toggle {
+display: none;
+background: var(--marrom);
+border: 0;
+border-radius: 12px;
+width: 46px;
+height: 46px;
+cursor: pointer;
+}
+
+.menu-toggle span {
+display: block;
+width: 22px;
+height: 2px;
+background: var(--creme);
+margin: 5px auto;
+transition: .25s;
+}
+
+/* =========================
+HERO
+========================= */
+
+.hero {
+position: relative;
+min-height: 100vh;
+display: flex;
+align-items: center;
+padding: 130px 0 90px;
+background: var(--marrom) url("imagens/hero-padaria.jpg") center/cover no-repeat;
+color: var(--creme);
+}
+
+.hero::before {
+content: "";
+position: absolute;
+inset: 0;
+background: linear-gradient(
+90deg,
+rgba(37, 20, 12, .88) 0%,
+rgba(37, 20, 12, .6) 50%,
+rgba(37, 20, 12, .15) 100%
+);
+}
+
+.hero .container {
+position: relative;
+}
+
+.hero-texto {
+max-width: 580px;
+}
+
+.selo {
+display: inline-block;
+padding: 7px 18px;
+border-radius: 999px;
+background: rgba(217, 144, 47, .2);
+border: 1px solid var(--dourado);
+color: #f5c477;
+font-weight: 700;
+letter-spacing: .12em;
+font-size: .85rem;
+margin-bottom: 24px;
+}
+
+.hero h1 {
+color: #fff;
+font-size: clamp(2.6rem, 6vw, 4.4rem);
+margin-bottom: 24px;
+}
+
+.hero p {
+font-size: 1.15rem;
+margin-bottom: 38px;
+color: #f3e6d2;
+}
+
+/* =========================
+SEÇÕES
+========================= */
+
+section {
+padding: 100px 0;
+}
+
+.titulo-secao {
+text-align: center;
+max-width: 620px;
+margin: 0 auto 56px;
+}
+
+.titulo-secao span {
+color: var(--laranja);
+font-weight: 700;
+letter-spacing: .14em;
+font-size: .85rem;
+}
+
+.titulo-secao h2 {
+font-size: clamp(1.9rem, 4vw, 2.8rem);
+margin: 10px 0 12px;
+}
+
+/* =========================
+PRODUTOS
+========================= */
+
+.produtos {
+background: var(--bege);
+}
+
+.grade-produtos {
+display: grid;
+grid-template-columns: repeat(6, 1fr);
+gap: 28px;
+}
+
+.card {
+grid-column: span 2;
+background: var(--creme);
+border-radius: var(--raio);
+overflow: hidden;
+box-shadow: var(--sombra);
+display: flex;
+flex-direction: column;
+}
+
+.card:nth-child(n+4) {
+grid-column: span 3;
+}
+
+.foto {
+position: relative;
+background: linear-gradient(135deg, #e7cfa8, #c99a5b);
+overflow: hidden;
+}
+
+.foto.sem-foto img {
+visibility: hidden;
+}
+
+.foto.sem-foto::after {
+content: "Foto: " attr(data-foto);
+position: absolute;
+inset: 0;
+display: grid;
+place-items: center;
+padding: 12px;
+text-align: center;
+font-size: .85rem;
+font-weight: 500;
+color: rgba(59, 36, 24, .6);
+}
+
+.card .foto {
+aspect-ratio: 4 / 3;
+}
+
+.card-corpo {
+padding: 26px;
+display: flex;
+flex-direction: column;
+gap: 10px;
+flex: 1;
+}
+
+.card h3 {
+font-size: 1.45rem;
+}
+
+.preco {
+margin-top: auto;
+padding-top: 8px;
+font-weight: 700;
+color: var(--laranja);
+font-size: 1.05rem;
+}
+
+/* =========================
+SOBRE
+========================= */
+
+.sobre-grade {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 64px;
+align-items: center;
+}
+
+.sobre .foto {
+border-radius: var(--raio);
+aspect-ratio: 4 / 5;
+box-shadow: var(--sombra);
+}
+
+.sobre h2 {
+font-size: clamp(2rem, 4vw, 3rem);
+margin: 10px 0 20px;
+}
+
+.sobre .rotulo {
+color: var(--laranja);
+font-weight: 700;
+letter-spacing: .14em;
+font-size: .85rem;
+}
+
+.destaque {
+margin: 22px 0 30px;
+padding-left: 18px;
+border-left: 4px solid var(--dourado);
+font-family: var(--serif);
+font-size: 1.25rem;
+color: var(--marrom);
+}
+
+.infos {
+display: grid;
+gap: 16px;
+}
+
+.info {
+background: #fff;
+border-radius: 16px;
+padding: 18px 22px;
+box-shadow: var(--sombra);
+}
+
+.info strong {
+display: block;
+color: var(--marrom);
+}
+
+/* =========================
+GALERIA
+========================= */
+
+.galeria {
+background: var(--marrom);
+}
+
+.galeria .titulo-secao h2 {
+color: var(--creme);
+}
+
+.galeria .titulo-secao p {
+color: #e6d4b8;
+}
+
+.grade-galeria {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-auto-rows: 220px;
+gap: 18px;
+}
+
+.grade-galeria .foto {
+border-radius: 18px;
+box-shadow: 0 10px 28px rgba(0, 0, 0, .3);
+}
+
+.grade-galeria .g-grande {
+grid-column: span 2;
+grid-row: span 2;
+}
+
+.grade-galeria .g-largo {
+grid-column: span 2;
+}
+
+/* =========================
+RODAPÉ
+========================= */
+
+.rodape {
+background: #26140c;
+color: #e6d4b8;
+padding: 56px 0 28px;
+}
+
+.rodape-topo {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 24px;
+flex-wrap: wrap;
+padding-bottom: 32px;
+border-bottom: 1px solid rgba(255, 255, 255, .12);
+}
+
+.rodape strong {
+font-family: var(--serif);
+font-size: 1.5rem;
+color: #fff;
+display: block;
+}
+
+.redes {
+display: flex;
+gap: 14px;
+}
+
+.redes a {
+padding: 10px 20px;
+border-radius: 999px;
+border: 1px solid var(--dourado);
+color: #f5c477;
+font-weight: 500;
+}
+
+.redes a:hover {
+background: var(--dourado);
+color: #fff;
+}
+
+.copy {
+text-align: center;
+margin-top: 24px;
+font-size: .92rem;
+}
+
+/* =========================
+TABLET
+========================= */
+
+@media (max-width: 960px) {
+
+section {
+padding: 76px 0;
+}
+
+.menu-toggle {
+display: block;
+order: 3;
+}
+
+.header .btn {
+display: none;
+}
+
+.menu {
+position: absolute;
+top: 74px;
+left: 0;
+right: 0;
+flex-direction: column;
+gap: 0;
+background: var(--creme);
+box-shadow: 0 14px 24px rgba(59, 36, 24, .15);
+max-height: 0;
+overflow: hidden;
+transition: max-height .3s;
+}
+
+.menu.aberto {
+max-height: 340px;
+}
+
+.menu a {
+padding: 16px 24px;
+border-top: 1px solid var(--bege);
+}
+
+.grade-produtos {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.card,
+.card:nth-child(n+4) {
+grid-column: auto;
+}
+
+.card:last-child {
+grid-column: 1 / -1;
+}
+
+.sobre-grade {
+grid-template-columns: 1fr;
+gap: 40px;
+}
+
+.sobre .foto {
+aspect-ratio: 16 / 10;
+}
+
+.grade-galeria {
+grid-template-columns: repeat(2, 1fr);
+grid-auto-rows: 200px;
+}
+
+}
+
+/* =========================
+CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+body {
+font-size: 16px;
+}
+
+.hero {
+min-height: auto;
+padding: 120px 0 70px;
+}
+
+.hero::before {
+background: rgba(37, 20, 12, .72);
+}
+
+.hero .btn {
+display: block;
+}
+
+.grade-produtos {
+grid-template-columns: 1fr;
+}
+
+.card:last-child {
+grid-column: auto;
+}
+
+.grade-galeria {
+grid-auto-rows: 160px;
+gap: 12px;
+}
+
+.grade-galeria .g-grande {
+grid-column: span 2;
+grid-row: span 1;
+}
+
+.rodape-topo {
+flex-direction: column;
+text-align: center;
+}
+
+.voltar-area {
+top: 82px;
+left: 14px;
+}
+
+.voltar-hc {
+padding: 8px 13px;
+font-size: .82rem;
+}
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+html {
+scroll-behavior: auto;
+}
+
+* {
+  transition: none !important;
+  }
+
+}
