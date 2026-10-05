@@ -451,6 +451,24 @@ section{
   font-size:12px;
 }
 
+.support-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.support-links .btn-outline{
+  color:var(--blue-dark);
+  border-color:var(--border-blue);
+  background:#fff;
+}
+
+.support-links .btn-outline:hover{
+  color:var(--blue);
+  border-color:var(--blue);
+  background:#f7f9ff;
+}
+
 /* =========================
    PORTFOLIO
 ========================= */
@@ -907,36 +925,60 @@ section{
   }
 
   .device-showcase{
-    height:300px;
+    width:100%;
+    max-width:460px;
+    height:auto;
+    min-height:0;
+    margin-inline:auto;
+    display:grid;
+    grid-template-columns:minmax(0,1fr) clamp(74px,24vw,95px);
+    align-items:center;
+    gap:clamp(8px,3vw,14px);
   }
 
   .laptop{
-    width:88%;
-    height:220px;
+    width:100%;
+    min-width:0;
+    height:auto;
+    aspect-ratio:540 / 340;
+    padding:clamp(7px,2.5vw,12px);
+    transform:none;
   }
 
   .fake-site{
-    padding:25px;
+    padding:clamp(10px,4vw,25px);
   }
 
   .fake-site strong{
-    font-size:24px;
-    margin:15px 0;
+    font-size:clamp(15px,5.6vw,24px);
+    margin:clamp(8px,3vw,15px) 0;
   }
 
   .phone{
-    width:95px;
-    height:205px;
-    right:0;
+    position:relative;
+    inset:auto;
+    width:100%;
+    min-width:0;
+    height:auto;
+    aspect-ratio:145 / 285;
+    padding:5px;
   }
 
   .phone-screen{
-    padding:20px 8px;
+    padding:clamp(12px,4vw,20px) clamp(5px,2vw,8px);
   }
 
   .phone-screen strong{
-    font-size:14px;
-    margin:16px 0;
+    font-size:clamp(10px,3.6vw,14px);
+    margin:clamp(10px,3vw,16px) 0;
+  }
+
+  .fake-site button,
+  .phone-screen button{
+    max-width:100%;
+    padding:8px clamp(5px,2vw,10px);
+    font-size:clamp(8px,2.6vw,10px);
+    white-space:nowrap;
   }
 
   .section{
@@ -962,6 +1004,14 @@ section{
   }
 
   .support-footer .btn{
+    width:100%;
+  }
+
+  .support-links{
+    flex-direction:column;
+  }
+
+  .support-links .btn{
     width:100%;
   }
 

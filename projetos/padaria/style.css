@@ -56,24 +56,7 @@ width: min(1160px, 100% - 40px);
 margin-inline: auto;
 }
 
-h1,
-h2,
-h3 {
-font-family: var(--serif);
-color: var(--marrom);
-line-height: 1.15;
-}
 
-/* =========================
-BOTÃO VOLTAR PARA HC WEB
-========================= */
-
-.voltar-area {
-position: fixed;
-top: 88px;
-left: 20px;
-z-index: 100;
-}
 
 .voltar-hc {
 display: inline-flex;
