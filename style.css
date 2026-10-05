@@ -432,6 +432,25 @@ section{
   margin:0;
 }
 
+.support-footer{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  margin-top:32px;
+  padding:24px 28px;
+  border:1px solid var(--border-blue);
+  border-radius:var(--radius);
+  background:linear-gradient(135deg,rgba(37,99,255,.06),rgba(124,58,237,.04));
+}
+
+.support-note{
+  max-width:560px;
+  margin:0;
+  color:var(--muted);
+  font-size:12px;
+}
+
 /* =========================
    PORTFOLIO
 ========================= */
@@ -936,6 +955,16 @@ section{
     grid-template-columns:1fr;
   }
 
+  .support-footer{
+    align-items:stretch;
+    flex-direction:column;
+    padding:22px;
+  }
+
+  .support-footer .btn{
+    width:100%;
+  }
+
   .project-image{
     height:210px;
   }
@@ -1014,7 +1043,7 @@ section{
 }
 
 
-/* Fundo premium das seções claras */
+/* Fundo premium das seï¿½ï¿½es claras */
 .light{
   background:
     radial-gradient(circle at 8% 15%, rgba(37,99,255,.07), transparent 28%),
@@ -1024,7 +1053,7 @@ section{
   border-bottom:1px solid rgba(37,99,255,.06);
 }
 
-/* Seção de orçamento */
+/* Seï¿½ï¿½o de orï¿½amento */
 .budget-box{
   position:relative;
   margin-top:45px;
@@ -1102,7 +1131,7 @@ section{
 }
 
 
-/* Fundo premium das seções claras */
+/* Fundo premium das seï¿½ï¿½es claras */
 .light{
   background:
     radial-gradient(circle at 5% 10%, rgba(37,99,255,.10), transparent 30%),
