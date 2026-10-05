@@ -272,3 +272,13 @@ h1 em, h2 em { font-weight: 500; color: var(--rose); }
   .gallery-1, .gallery-4 { grid-column: auto; grid-row: auto; }
   .footer-grid { grid-template-columns: 1fr; }
 }
+
+/* Fotos da galeria (o degrade fica como reserva) */
+.gallery-1 { background: url('imagens/ambiente.jpg') center/cover no-repeat, linear-gradient(150deg, #cfa9a0, #75534e); }
+.gallery-2 { background: url('imagens/cuidado.jpg') center/cover no-repeat, linear-gradient(135deg, #dbc0b8, #aa8179); }
+.gallery-3 { background: url('imagens/estilo.jpg') center/cover no-repeat, linear-gradient(135deg, #b78f86, #e4cfc8); }
+
+/* Fotos: bloco Experiencia e secao Sobre (o degrade fica como reserva) */
+.gallery-4 { background: url('imagens/experiencia.jpg') center/cover no-repeat, linear-gradient(135deg, #d8bcb4, #80605a); }
+.image-about { background: url('imagens/sobre.jpg') center/cover no-repeat, linear-gradient(135deg, #d9b8ad, #8c6862); }
+.image-about::before { display: none; }
