@@ -247,105 +247,244 @@ section{
 ========================= */
 
 .device-showcase{
+  width:100%;
+  max-width:600px;
   height:460px;
   position:relative;
   display:flex;
   align-items:center;
-  justify-content:center;
+  justify-content:flex-start;
 }
 
 .laptop{
-  width:540px;
-  height:340px;
-  border:5px solid #596781;
-  border-bottom-width:12px;
-  border-radius:16px;
-  background:#080d18;
-  padding:13px;
-  transform:perspective(900px) rotateY(-7deg);
+  position:relative;
+  z-index:1;
+  width:calc(100% - 42px);
+  max-width:540px;
+  min-width:0;
+  height:auto;
+  aspect-ratio:540 / 340;
+  border:1px solid #65728a;
+  border-radius:18px;
+  background:linear-gradient(145deg,#75829a 0%,#27334a 12%,#080d18 38%,#10192a 100%);
+  padding:17px 10px 12px;
+  transform:perspective(1100px) rotateY(-4deg);
   box-shadow:
-    0 35px 80px rgba(0,0,0,.50),
-    0 0 50px rgba(37,99,255,.08);
+    0 28px 55px rgba(0,0,0,.38),
+    0 10px 22px rgba(37,99,255,.10);
 }
 
 .screen{
+  display:flex;
+  flex-direction:column;
   height:100%;
-  border-radius:8px;
+  min-height:0;
+  border-radius:10px;
   overflow:hidden;
   background:#fff;
 }
 
+.browser-bar{
+  display:flex;
+  flex:0 0 30px;
+  align-items:center;
+  gap:12px;
+  padding:0 12px;
+  background:linear-gradient(180deg,#f7f8fb,#e9edf4);
+  border-bottom:1px solid #dce2ec;
+}
+
+.window-indicators{
+  display:inline-flex;
+  flex:0 0 auto;
+  gap:4px;
+}
+
+.window-indicators span{
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:#aab4c4;
+}
+
+.window-indicators span:first-child{
+  background:#f28b82;
+}
+
+.window-indicators span:nth-child(2){
+  background:#fbbc04;
+}
+
+.window-indicators span:last-child{
+  background:#81c995;
+}
+
+.browser-url{
+  flex:1;
+  max-width:260px;
+  margin:auto;
+  padding:3px 14px;
+  overflow:hidden;
+  border:1px solid #dce2ec;
+  border-radius:5px;
+  background:#fff;
+  color:#7b8799;
+  font-size:9px;
+  line-height:1.2;
+  text-align:center;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
 .fake-site{
+  display:flex;
+  flex:1;
+  min-height:0;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:center;
   height:100%;
-  padding:48px 38px;
+  padding:24px clamp(110px,16%,145px) 24px clamp(20px,3vw,38px);
   background:
-    radial-gradient(circle at 90% 15%,rgba(124,58,237,.10),transparent 28%),
+    radial-gradient(circle at 95% 15%,rgba(124,58,237,.08),transparent 30%),
     linear-gradient(135deg,#fff,#f3f6fb);
 }
 
-.fake-site b{
-  display:block;
+.fake-site small{
   color:var(--blue);
-  font-size:15px;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:1.5px;
 }
 
 .fake-site strong{
   display:block;
-  font-size:37px;
-  line-height:1.05;
-  max-width:300px;
-  margin:30px 0 20px;
+  max-width:350px;
+  margin:12px 0 8px;
   color:#172033;
+  font-size:clamp(21px,2.4vw,29px);
+  line-height:1.16;
+  letter-spacing:-.7px;
+}
+
+.fake-site p{
+  max-width:360px;
+  margin:0 0 16px;
+  color:#667085;
+  font-size:11px;
+  line-height:1.55;
 }
 
 .fake-site button,
 .phone-screen button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:34px;
   border:0;
-  border-radius:8px;
+  border-radius:9px;
   background:linear-gradient(135deg,#2563ff,#6d5dfc);
   color:#fff;
-  padding:11px 18px;
+  padding:0 14px;
   font-weight:700;
+  font-size:10px;
+  white-space:nowrap;
+  box-shadow:0 7px 16px rgba(37,99,255,.20);
 }
 
 .phone{
   position:absolute;
-  right:8px;
-  bottom:20px;
-  width:145px;
-  height:285px;
-  border:5px solid #596781;
-  border-radius:26px;
-  background:#080d18;
+  z-index:2;
+  right:4px;
+  bottom:44px;
+  width:clamp(132px,11vw,150px);
+  height:auto;
+  aspect-ratio:145 / 285;
+  border:1px solid #6c7890;
+  border-radius:28px;
+  background:linear-gradient(145deg,#71809a 0%,#202b40 20%,#080d18 100%);
   padding:7px;
   box-shadow:
-    0 25px 55px rgba(0,0,0,.55),
-    0 0 35px rgba(124,58,237,.12);
+    0 22px 42px rgba(0,0,0,.42),
+    0 0 28px rgba(124,58,237,.12);
+}
+
+.phone::before{
+  content:"";
+  position:absolute;
+  top:10px;
+  left:50%;
+  width:30px;
+  height:4px;
+  border-radius:999px;
+  background:#424e63;
+  transform:translateX(-50%);
 }
 
 .phone-screen{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:center;
   height:100%;
-  border-radius:17px;
-  background:#f8faff;
-  padding:30px 12px;
+  padding:18px 10px;
+  border-radius:20px;
+  background:
+    radial-gradient(circle at 85% 8%,rgba(124,58,237,.08),transparent 35%),
+    linear-gradient(160deg,#fff,#f3f6fc);
   color:#172033;
 }
 
-.phone-screen b{
-  font-size:11px;
+.phone-screen small{
   color:var(--blue);
+  font-size:9px;
+  font-weight:850;
+  letter-spacing:1.2px;
 }
 
 .phone-screen strong{
   display:block;
-  font-size:20px;
-  line-height:1.1;
-  margin:25px 0;
+  margin:16px 0 8px;
+  font-size:17px;
+  line-height:1.15;
+  letter-spacing:-.3px;
+}
+
+.phone-screen p{
+  margin:0 0 14px;
+  color:var(--muted);
+  font-size:10px;
+  line-height:1.45;
 }
 
 .phone-screen button{
+  min-height:30px;
+  padding:0 10px;
+  font-size:9px;
+}
+
+.responsive-badge{
+  position:absolute;
+  bottom:12px;
+  left:18px;
+  z-index:3;
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  padding:8px 12px;
+  border:1px solid rgba(126,164,255,.24);
+  border-radius:999px;
+  background:rgba(17,24,45,.88);
+  color:#e5edff;
   font-size:10px;
-  padding:8px 10px;
+  font-weight:700;
+  box-shadow:0 8px 22px rgba(0,0,0,.22);
+}
+
+.responsive-badge span{
+  color:#8eafff;
+  font-size:13px;
+  line-height:1;
 }
 
 /* =========================
@@ -843,7 +982,20 @@ section{
   }
 
   .device-showcase{
-    height:390px;
+    max-width:620px;
+    height:420px;
+    margin:0 auto;
+  }
+
+  .laptop{
+    width:calc(100% - 36px);
+    max-width:540px;
+  }
+
+  .phone{
+    right:0;
+    bottom:42px;
+    width:clamp(125px,18vw,145px);
   }
 
   .hero h1{
@@ -924,36 +1076,106 @@ section{
     width:100%;
   }
 
-  .device-showcase{width:100%;max-width:360px;height:auto;min-height:0;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:28px;}
+  .device-showcase{
+    width:100%;
+    max-width:460px;
+    height:auto;
+    min-height:0;
+    margin:0 auto;
+    flex-direction:column;
+    align-items:center;
+    gap:22px;
+  }
 
-  .laptop{position:relative;width:100%;max-width:360px;min-width:0;height:auto;aspect-ratio:540 / 340;padding:clamp(7px,2.5vw,12px);transform:none;}
+  .laptop{
+    position:relative;
+    width:100%;
+    max-width:460px;
+    min-width:0;
+    height:auto;
+    aspect-ratio:540 / 340;
+    padding:12px 8px 9px;
+    transform:none;
+  }
 
   .fake-site{
-    padding:clamp(10px,4vw,25px);
+    padding:clamp(12px,4vw,24px);
   }
 
   .fake-site strong{
-    font-size:clamp(15px,5.6vw,24px);
-    margin:clamp(8px,3vw,15px) 0;
+    max-width:300px;
+    margin:8px 0 5px;
+    font-size:clamp(16px,5.2vw,23px);
   }
 
-  .phone{position:relative;inset:auto;width:145px;max-width:42vw;min-width:0;height:285px;aspect-ratio:auto;padding:5px;margin:0 auto;}
+  .fake-site p{
+    margin-bottom:9px;
+    font-size:clamp(9px,2.8vw,11px);
+    line-height:1.4;
+  }
+
+  .browser-bar{
+    flex-basis:24px;
+    gap:8px;
+    padding:0 8px;
+  }
+
+  .window-indicators{
+    gap:3px;
+  }
+
+  .window-indicators span{
+    width:5px;
+    height:5px;
+  }
+
+  .browser-url{
+    padding:2px 8px;
+    font-size:8px;
+  }
+
+  .fake-site button{
+    min-height:29px;
+    padding:0 10px;
+    font-size:9px;
+  }
+
+  .phone{
+    position:relative;
+    inset:auto;
+    width:clamp(145px,40vw,165px);
+    max-width:60vw;
+    min-width:0;
+    height:auto;
+    aspect-ratio:145 / 285;
+    padding:6px;
+    margin:0 auto;
+  }
 
   .phone-screen{
-    padding:clamp(12px,4vw,20px) clamp(5px,2vw,8px);
+    padding:18px 12px;
   }
 
   .phone-screen strong{
-    font-size:clamp(10px,3.6vw,14px);
-    margin:clamp(10px,3vw,16px) 0;
+    margin:14px 0 8px;
+    font-size:clamp(15px,4.4vw,18px);
   }
 
-  .fake-site button,
+  .phone-screen p{
+    margin-bottom:12px;
+    font-size:10px;
+  }
+
   .phone-screen button{
-    max-width:100%;
-    padding:8px clamp(5px,2vw,10px);
-    font-size:clamp(8px,2.6vw,10px);
-    white-space:nowrap;
+    min-height:29px;
+    padding:0 9px;
+    font-size:9px;
+  }
+
+  .responsive-badge{
+    position:static;
+    order:3;
+    padding:8px 12px;
   }
 
   .section{
