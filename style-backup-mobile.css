@@ -924,9 +924,26 @@ section{
     width:100%;
   }
 
-  .device-showcase{width:100%;max-width:360px;height:auto;min-height:0;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:28px;}
+  .device-showcase{
+    width:100%;
+    max-width:460px;
+    height:auto;
+    min-height:0;
+    margin-inline:auto;
+    display:grid;
+    grid-template-columns:minmax(0,1fr) clamp(74px,24vw,95px);
+    align-items:center;
+    gap:clamp(8px,3vw,14px);
+  }
 
-  .laptop{position:relative;width:100%;max-width:360px;min-width:0;height:auto;aspect-ratio:540 / 340;padding:clamp(7px,2.5vw,12px);transform:none;}
+  .laptop{
+    width:100%;
+    min-width:0;
+    height:auto;
+    aspect-ratio:540 / 340;
+    padding:clamp(7px,2.5vw,12px);
+    transform:none;
+  }
 
   .fake-site{
     padding:clamp(10px,4vw,25px);
@@ -937,7 +954,15 @@ section{
     margin:clamp(8px,3vw,15px) 0;
   }
 
-  .phone{position:relative;inset:auto;width:145px;max-width:42vw;min-width:0;height:285px;aspect-ratio:auto;padding:5px;margin:0 auto;}
+  .phone{
+    position:relative;
+    inset:auto;
+    width:100%;
+    min-width:0;
+    height:auto;
+    aspect-ratio:145 / 285;
+    padding:5px;
+  }
 
   .phone-screen{
     padding:clamp(12px,4vw,20px) clamp(5px,2vw,8px);
